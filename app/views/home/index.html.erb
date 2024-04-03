@@ -1,0 +1,6 @@
+<h1>Mobile Auth</h1>
+<% if current_user %>
+  <p>Welcome, <%= current_user.email %></p>
+<% else %>
+  <%= button_to 'Sign in with Google', '/auth/google_oauth2', data: { turbo: false } %>
+<% end %>
